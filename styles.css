@@ -61,6 +61,8 @@ table {
   --darkGray: #847e89;
   --xdarkGray: #43293e;
   --black: #262032;
+  --ios-top: env(safe-area-inset-top);
+  --ios-bottom: env(safe-area-inset-bottom);
 }
 
 * {
@@ -129,7 +131,7 @@ p {
   overflow: hidden;
   display: grid;
   grid-template-columns: 100vw;
-  grid-template-rows: 50vh 50vh 300px auto 300px;
+  grid-template-rows: calc(50vh - (var(--ios-bottom) + var(--ios-top)) / 2) calc( 50vh - (var(--ios-bottom) + var(--ios-top)) / 2) 300px auto 300px;
 }
 
 span.button {
@@ -269,7 +271,7 @@ span.shop:hover img {
   height: 50px;
   left: 0;
   bottom: 0;
-  bottom: env(safe-area-inset-bottom);
+  bottom: calc(0 + env(safe-area-inset-bottom));
   display: -ms-flexbox;
   display: flex;
   -ms-flex-flow: row nowrap;
