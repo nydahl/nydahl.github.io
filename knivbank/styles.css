@@ -181,7 +181,7 @@ p {
   -ms-flex-align: center;
       align-items: center;
   border-radius: 4px;
-  box-shadow: 0 50px 250px var(--darkblue), 0 0px 250px var(--darkblue);
+  filter: drop-shadow(0 10px 25px var(--darkblue));
 }
 
 #navcontainer nav.active {
