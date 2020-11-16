@@ -199,6 +199,7 @@ p {
   background-color: var(--lightgray);
   background-image: url(img/bg-intro-mobile.svg);
   background-repeat: no-repeat;
+  background-position: top right;
 }
 
 #hero img {
@@ -407,23 +408,21 @@ footer .social img {
     background-position: 50vw top;
     background-image: url(img/bg-intro-desktop.svg);
     background-size: 120vh;
+    position: relative;
   }
   #hero img {
+    width: 40%;
+    height: 118%;
+    -o-object-position: top left;
+       object-position: top left;
     -ms-flex-order: 2;
         order: 2;
-    -o-object-fit: unset;
-       object-fit: unset;
-    -o-object-position: unset;
-       object-position: unset;
     -ms-flex-item-align: end;
         align-self: flex-end;
     position: absolute;
     top: 0;
     right: 0;
-    transform: translateX(95px);
-    width: auto;
     max-width: 50%;
-    height: auto;
     max-height: 100vh;
   }
   #hero .hero__text-container {
